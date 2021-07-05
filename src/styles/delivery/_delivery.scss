@@ -1,0 +1,39 @@
+.delivery {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: var(--main-color);
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+  }
+
+  &__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 180px;
+    height: 100%;
+    width: 20%;
+    background: url('../assets/images/delivery/package.svg') 50% 50% no-repeat;
+  }
+
+  &__right {
+    width: 70%;
+    color: #000;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    margin-left: .2rem;
+    font-size: 1.8rem;
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }
+}

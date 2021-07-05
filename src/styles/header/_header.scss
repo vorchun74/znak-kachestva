@@ -1,0 +1,51 @@
+.header {
+  position: fixed;
+  z-index: 500;
+
+  width: 100%;
+
+  background-color: rgba(155, 96, 19, 0.8);
+  box-shadow: 0 2px 15px 1px #000;
+
+  transition: transform .3s linear;
+  
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem 0;
+  }
+
+  @media screen and (max-width: 475px) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background-color: rgba(0, 0, 0, .9);
+    box-shadow: none;
+
+    transition:
+      z-index .2s linear,
+      opacity .2s linear;
+
+    &.active {
+      z-index: 500;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &__inner {
+      position: relative;
+      
+      flex-direction: column-reverse;
+      justify-content: center;
+      height: 100vh;
+      padding: 0;
+    }
+  }
+}

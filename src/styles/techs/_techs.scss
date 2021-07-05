@@ -1,0 +1,50 @@
+.techs {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+
+  &__item {
+    width: 25%;
+    max-height: 360px;
+    position: relative;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+
+    &:hover .techs__overlay {
+      opacity: 1;
+    }
+
+    
+    @media screen and (max-width: 1040px) {
+      width: 50%;
+    }
+  }
+
+  &__overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+
+    background: rgba(#c87e28, .8);
+    transition: opacity .3s linear;
+
+    p {
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.1;
+      color: #000;
+    }
+  }
+}

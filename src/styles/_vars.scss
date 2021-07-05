@@ -1,0 +1,55 @@
+:root {
+  --bg-color: #232529;
+  --light-bg-color: #313741;
+  --main-color: #c87e28;
+  --main-secondary-color: #503813;
+  --gradient-right: linear-gradient(
+    to right,
+    var(--main-color),
+    var(--main-secondary-color)
+  );
+  --gradient-bottom: linear-gradient(
+    to bottom,
+    var(--main-color),
+    var(--main-secondary-color)
+  );
+  --gradient-disabled: linear-gradient(
+    to right bottom,
+    var(--light-bg-color),
+    #ccc,
+    var(--light-bg-color)
+  );
+}
+
+@keyframes fadeLeft {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeBottom {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

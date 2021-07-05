@@ -1,0 +1,43 @@
+.socials {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1.5rem;
+
+    font-size: 0;
+    border-radius: 50%;
+    transition: box-shadow 0.2s linear;
+
+    &:hover {
+      box-shadow: 0 0 10px 3px rgba(#fff, 0.5);
+    }
+
+    &:first-child {
+      background: transparent url('../assets/images/socials/vk.svg') 50% 50% no-repeat;
+      background-size: 2rem;
+    }
+    &:nth-child(2) {
+      background: transparent url('../assets/images/socials/whatsapp.svg') 50% 50% no-repeat;
+      background-size: 2rem;
+    }
+    &:last-child {
+      background: transparent url('../assets/images/socials/instagram.svg') 50% 50% no-repeat;
+      background-size: 2rem;
+    }
+
+    @media screen and (max-width: 640px) {
+      width: 2.35rem;
+      height: 2.35rem;
+      margin-right: 1rem;
+    }
+
+    @media screen and (max-width: 475px) {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 2rem;
+    }
+  }
+}
